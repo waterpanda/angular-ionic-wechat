@@ -1,0 +1,6 @@
+<div class="tabs tabs-icon-top">
+    <a class="tab-item"  ng-repeat="button in buttons">
+        <i ng-click="change($index)" class="{{$index | getButtonClass : button.on}}"></i>
+        <div>{{button.name}}</div>
+    </a>
+</div>

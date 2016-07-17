@@ -1,0 +1,39 @@
+<ion-content ng-controller="AdressCtrl" id="AdressCtrl" class="has-header has-footer">
+
+    <ion-item class="item-divider"></ion-item>
+    <ion-item class="item item-icon-left item-icon-right" href="javascript:;">
+        <i class="icon ion-ios-personadd-outline"></i>
+        新的朋友
+        <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+
+    <ion-item class="item item-icon-left item-icon-right" href="javascript:;">
+        <i class="icon ion-ios-people-outline"></i>
+        群聊
+        <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+
+    <ion-item class="item item-icon-left item-icon-right" href="javascript:;">
+        <i class="icon ion-ios-book-outline"></i>
+        标签
+        <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+
+    <ion-item class="item item-icon-left item-icon-right" href="javascript:;">
+        <i class="icon ion-ios-flag-outline"></i>
+        公众号
+        <i class="icon ion-ios-arrow-right"></i>
+    </ion-item>
+
+    <ion-list ng-repeat="item in contact_items">
+        <ion-item class="item-divider">{{item['index']}}</ion-item>
+        <ion-item ng-repeat="list in item['list']"
+                  item="item"
+                  class="item-remove-animate item-avatar">
+            <img src="{{list.img}}">
+            <h2>{{list.name}}-{{list.id}}</h2>
+            <p>{{list.description}}</p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

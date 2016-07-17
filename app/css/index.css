@@ -1,0 +1,16 @@
+.tabs .ion-ios-chatbubble,.tabs .ion-ios-chatbubble+div,.tabs .ion-ios-list,.tabs .ion-ios-list+div,.tabs .ion-ios-people,.tabs .ion-ios-people+div{
+    color: #4cd964;
+}
+.item .chat{
+    float: right;
+    margin-right: -20px;
+    margin-top: -40px;
+    color: #e42112;
+    font-weight: bolder;
+}
+#AdressCtrl .item-icon-left,#FindCtrl .item-icon-left{
+    line-height:10px;
+}
+#AdressCtrl .ion-ios-arrow-right,#FindCtrl .ion-ios-arrow-right{
+    font-size:20px;
+}
