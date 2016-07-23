@@ -6,7 +6,8 @@
     <ion-list>
         <ion-item ng-repeat="item in items"
                   item="item"
-                  class="item-remove-animate item-avatar" ng-show="item.show">
+                  class="item-remove-animate item-avatar"
+                  ng-click="goMessage($index)">
             <img src="{{item.img}}">
             <h2>{{item.name|changeFace: $index}}</h2>
             <p>{{item.description}}</p>

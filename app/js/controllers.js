@@ -35,10 +35,14 @@ angularCtrls.controller('FootCtrl', ['$scope',
         }
     }
 ]);
-angularCtrls.controller('ChatCtrl', ['$scope', '$ionicPopup', '$timeout', '$http','userList',
-    function ($scope, $ionicPopup, $timeout, $http,userList) {
+angularCtrls.controller('ChatCtrl', ['$scope', '$ionicPopup', '$timeout', '$http','userList','$state',
+    function ($scope, $ionicPopup, $timeout, $http,userList,$state) {
         //微信列表
         $scope.items = userList.getList();
+        //
+        $scope.goMessage = function (id) {
+            $state.go('messageDetil',{'ID':id});
+        }
         //  confirm 对话框
         $scope.read = function (isRead, num) {
             var state = '';
@@ -203,4 +207,22 @@ angularCtrls.controller('FindCtrl',['$scope',
     function ($scope) {
         $scope.qweqwe = [];
     }
-])
+]);
+angularCtrls.controller('leftCtrl',['$scope',
+    function ($scope) {
+        $scope.wechat = 'WaterPanda'
+    }
+]);
+angularCtrls.controller('messageCtrl',['$scope',
+    function ($scope) {
+        $scope.messageDetils = [
+            {
+                time : '1999.12.1',
+                pic : 'images/1.jpg',
+                content : '今天天气不错啊',
+                isFromeMe : false,
+                
+            }
+        ]
+    }
+]);

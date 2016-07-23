@@ -1,10 +1,20 @@
 <div class="container">
-    <div ui-view="header"></div>
-    <div ui-view="content">
-        <adress ng-show="buttons[1].on"></adress>
-        <chat ng-show="buttons[0].on"></chat>
-        <find ng-show="buttons[2].on"></find>
-    </div>
-    <div ui-view="footer"></div>
+    <ion-side-menus>
+        <!-- Left menu -->
+        <ion-side-menu side="left">
+            <div ui-view="leftMenu"></div>
+        </ion-side-menu>
 
+        <ion-side-menu-content>
+            <!-- Main content, usually <ion-nav-view> -->
+            <div ui-view="header"></div>
+            <div ui-view="content">
+                <adress ng-show="buttons[1].on"></adress>
+                <chat ng-show="buttons[0].on"></chat>
+                <find ng-show="buttons[2].on"></find>
+            </div>
+            <div ui-view="footer"></div>
+        </ion-side-menu-content>
+
+    </ion-side-menus>
 </div>
